@@ -1,7 +1,21 @@
+import { usePage } from "@inertiajs/react";
 import { ChevronRightIcon } from "lucide-react";
-import { GuestLayout } from "../Layouts/GuestLayout";
+import { useEffect } from "react";
+import { toast } from "sonner";
+import GuestLayout from "../layouts/GuestLayout";
 
 export default function Welcome() {
+    const { flash } = usePage().props;
+
+    useEffect(() => {
+        if (flash.success) {
+            toast.success(flash.success);
+        }
+        if (flash.error) {
+            toast.error(flash.error);
+        }
+    }, [flash]);
+
     return (
         <GuestLayout className="flex flex-col justify-center items-center gap-8 p-16">
             <section className="space-y-4 text-center w-3/4">
