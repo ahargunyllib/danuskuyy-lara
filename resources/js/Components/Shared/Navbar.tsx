@@ -48,11 +48,11 @@ export function Navbar() {
                         </DropdownMenuContent>
                     </DropdownMenu>
                 ) : (
-                    <button className="py-2 px-4 bg-yellow-400 rounded-xl shadow-md border border-yellow-600 flex flex-row gap-4">
-                        <a href="/auth/google/redirect" className="font-medium text-md">
-                            Login
-                        </a>
-                    </button>
+                    <a href="/auth/login" className="py-2 px-4 bg-yellow-400 rounded-xl shadow-md border border-yellow-600 flex flex-row gap-4 font-medium text-md">
+                        <p >
+                            Masuk
+                        </p>
+                    </a>
                 )}
             </div>
         </nav>
